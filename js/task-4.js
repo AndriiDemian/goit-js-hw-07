@@ -16,12 +16,13 @@ document.querySelector(".login-form").addEventListener('submit', function (event
         }
       }
     }
+    console.log("Дані з форми:", formData);
 
     form.reset();
 });
 
 
-const labels = document.querySelectorAll('label');
+// const labels = document.querySelectorAll('label');
 
-labels[0].classList.add('labelForm');
-labels[1].classList.add('labelForm');    
+// labels[0].classList.add('labelForm');
+// labels[1].classList.add('labelForm');    
