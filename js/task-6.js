@@ -22,8 +22,17 @@ document.addEventListener('DOMContentLoaded', function() {
   destroyButton.addEventListener('click', function() {
     destroyBoxes();
   });
+  function destroyBoxes() {
+    const boxes = document.querySelectorAll('#boxes div');
+    boxes.forEach(box => {
+      box.remove();
+    });
+  }
 
   function createBoxes(amount) {
+    
+    boxesContainer.innerHTML = '';
+  
     for (let i = 0; i < amount; i++) {
       const box = document.createElement('div');
       box.style.width = `${30 + i * 10}px`;
@@ -31,10 +40,6 @@ document.addEventListener('DOMContentLoaded', function() {
       box.style.backgroundColor = getRandomHexColor();
       boxesContainer.appendChild(box);
     }
-  }
-
-  function destroyBoxes() {
-    boxesContainer.innerHTML = '';
   }
 });
 
